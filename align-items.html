@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos align-items</title>
+
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+
+        }
+        .item{
+            background-color: rgb(114, 10, 161);
+            color: white;
+            text-align: center;
+            margin: 5px;
+            flex: 1;
+
+        }
+        .flex{
+            flex: 1;
+        }
+        .center{
+            align-items: center;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .flex-start{
+            align-items: flex-start;
+        }
+        .flex-end{
+            align-items: flex-end;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .central{
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <p>center</p>
+    <section class="container center flex">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>stretch</p>
+    <section class="container stretch flex">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>flex-start</p>
+    <section class="container flex-start flex">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>flex-end</p>
+    <section class="container flex-end flex">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>baseline</p>
+    <section class="container baseline flex">
+        <div class="item"><br>item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+
+    <h1>column</h1>
+
+    <p>flex-start</p>
+    <section class="container flex-start flex column">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>flex-end</p>
+    <section class="container flex-end flex column">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>center</p>
+    <section class="container center flex column">
+        <div class="item">item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>baseline</p>
+    <section class="container baseline flex column">
+        <div class="item"><br>item1</div>
+        <div class="item">Vamos fazer um pequeno teste</div>
+        <div class="item">item3. vai sempre crescer respeitando a margem entre o topo e o bottom.</div>
+    </section>
+    <p>alinhamento central á tela</p>
+    <section class="container central">
+        <div class="item">Lorem ipsum is therefore always
+            free for repetition. 
+        </div>
+    </section>
+</body>
+</html>
